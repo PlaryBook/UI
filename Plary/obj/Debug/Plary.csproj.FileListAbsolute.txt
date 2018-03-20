@@ -1,0 +1,22 @@
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\bin\Debug\Plary.exe.config
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\bin\Debug\Plary.exe
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\bin\Debug\Plary.pdb
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.csprojResolveAssemblyReference.cache
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\MainWindow.g.cs
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\App.g.cs
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary_MarkupCompile.cache
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary_MarkupCompile.lref
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\MainWindow.baml
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.g.resources
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.Properties.Resources.resources
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.csproj.GenerateResource.Cache
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.csproj.CoreCompileInputs.cache
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.exe
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Plary.pdb
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\App.baml
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\ProfileBookUserControl.g.cs
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\ProfileBookUserControl.baml
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Simple Styles.baml
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\ProfilePurchaseHistoryUserControl.g.cs
+E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\ProfilePurchaseHistoryUserControl.baml
