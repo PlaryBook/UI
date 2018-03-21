@@ -111,9 +111,16 @@ namespace Plary
             this.BadgeInfoScreen.Visibility = Visibility.Visible;
         }
 
-        private void OnFullBadgeScreenClick(object sender, MouseButtonEventArgs e)
+        private void BadgeInfoFadeOutComplete(object sender, EventArgs e)
         {
             this.BadgeInfoScreen.Visibility = Visibility.Hidden;
+        }
+
+        private void OnFullBadgeScreenClick(object sender, MouseButtonEventArgs e)
+        {
+            Storyboard sb = this.FindResource("BadgeInfoFadeOut") as Storyboard;
+            sb.Begin();
+            sb.Completed += BadgeInfoFadeOutComplete;
         }
 
         #endregion
