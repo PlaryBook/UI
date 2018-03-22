@@ -34,17 +34,27 @@ namespace Plary
              * */
 
             //Hide the other screens
-            //this.LoginScreen.Visibility = Visibility.Hidden;
+            //Login Screen
+            this.LoginScreen.Visibility = Visibility.Hidden;
             this.CreateAccountScreen.Visibility = Visibility.Hidden;
             this.EmailCodeScreen.Visibility = Visibility.Hidden;
             this.AccountCreatedScreen.Visibility = Visibility.Hidden;
+
+            //Profile Screen
             this.BadgeInfoScreen.Visibility = Visibility.Hidden;
-            this.Headers.Visibility = Visibility.Hidden;
-            this.ProfileScreen.Visibility = Visibility.Hidden;
+            //this.Headers.Visibility = Visibility.Hidden;
+            //this.ProfileScreen.Visibility = Visibility.Hidden;
             this.BookDetail.Visibility = Visibility.Hidden;
             this.Purchase_Popular.Visibility = Visibility.Hidden;
             this.BookDetail_Purchase.Visibility = Visibility.Hidden;
-            this.SettingBar.Visibility = Visibility.Hidden;        
+            this.SettingBar.Visibility = Visibility.Hidden;
+
+            //Purchase Screen
+            this.Purchase_NewestRelease.Visibility = Visibility.Hidden;
+            this.Purchase_Popular.Visibility = Visibility.Hidden;
+            this.BookDetail.Visibility = Visibility.Hidden;
+            this.BookDetail_Purchase.Visibility = Visibility.Hidden;
+            this.SettingBar.Visibility = Visibility.Hidden;
 
             //Login and create account screen button functionality
             this.LoginButton.Click += OnLogin;
@@ -58,6 +68,9 @@ namespace Plary
             //Profile Screen (And badge info) functionality
             FullBadge1.MouseLeftButtonDown += OnFullBadgeClick;
             BadgeInfoScreen.MouseLeftButtonDown += OnFullBadgeScreenClick;
+
+
+            this.ReadingBookAddButton.MouseLeftButtonDown += ToPurchaseScreen;
         }
 
         #region Login/Create account screen button functionality
@@ -118,6 +131,11 @@ namespace Plary
         private void OnFullBadgeScreenClick(object sender, MouseButtonEventArgs e)
         {
             this.BadgeInfoScreen.Visibility = Visibility.Hidden;
+        }
+
+        private void ToPurchaseScreen(object sender, MouseButtonEventArgs e)
+        {
+            this.Purchase_NewestRelease.Visibility = Visibility.Visible;
         }
 
         #endregion

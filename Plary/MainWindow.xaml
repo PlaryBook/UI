@@ -102,7 +102,7 @@
             <Button x:Name="CreatedContinueButton" Content="Continue" Height="75" Style="{DynamicResource LoginMenuButton}" Canvas.Top="687" Width="236" Canvas.Left="167"/>
             <TextBlock x:Name="CreatedMessage" Height="134" TextWrapping="Wrap" Text="Account successfully created" Canvas.Top="444" Width="570" FontSize="48" TextAlignment="Center"/>
         </Canvas>
-        <Canvas x:Name="Headers" Height="160" Width="760">
+        <Canvas x:Name="Headers" Height="160" Width="760" d:IsHidden="True">
             <Rectangle x:Name="PrimaryHeaderBar" Fill="#FFF4F4F5" Height="90" Stroke="Black" Width="762" Canvas.Left="-1"/>
             <Rectangle x:Name="SecondaryHeaderBar" Fill="#FFF4F4F5" Height="72" Stroke="Black" Canvas.Top="89" Width="762" Canvas.Left="-1"/>
             <TextBlock x:Name="FirstNameTextBox" Height="25" Canvas.Left="551.59" TextWrapping="Wrap" Text="First Name" Canvas.Top="15" Width="108.75" FontSize="18" FlowDirection="RightToLeft"/>
@@ -167,16 +167,16 @@
                 <Path Data="M712,61 L680.66667,44.333333" Fill="#FFF4F4F5" Height="17.667" Stretch="Fill" Stroke="Black" Canvas.Top="17.333" Width="32.333"/>
             </Canvas>
         </Canvas>
-        <Canvas x:Name="ProfileScreen" Height="817" Canvas.Left="-1" Canvas.Top="160" Width="762" d:IsHidden="True">
+        <Canvas x:Name="ProfileScreen" Height="817" Canvas.Left="-1" Canvas.Top="160" Width="762">
             <Rectangle x:Name="ReadingListHeader" Fill="#FFF4F4F5" Height="71" Stroke="Black" Width="762"/>
             <TextBlock x:Name="ReadingListHeaderText" Height="54" Canvas.Left="11" TextWrapping="Wrap" Text="Reading List" Canvas.Top="9" Width="200" FontSize="36"/>
-            <local:ProfileBookUserControl x:Name="ReadingBook1TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="84.5" Canvas.Left="11"/>
-            <local:ProfileBookUserControl x:Name="ReadingBook2TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="84.5" Canvas.Left="189"/>
+            <!--local:ProfileBookUserControl x:Name="ReadingBook1TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="84.5" Canvas.Left="11"/-->
+            <!--local:ProfileBookUserControl x:Name="ReadingBook2TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="84.5" Canvas.Left="189"/-->
             <Button x:Name="ReadingBookAddButton" Content="+" Width="140" FontSize="72" Height="177" Canvas.Left="376" Canvas.Top="84.5"/>
             <Rectangle x:Name="WishListHeader" Fill="#FFF4F4F5" Height="71" Stroke="Black" Canvas.Top="276" Width="762"/>
             <TextBlock x:Name="WishListHeaderText" Height="54" Canvas.Left="11" TextWrapping="Wrap" Text="Wish List" Canvas.Top="285" Width="200" FontSize="36"/>
-            <local:ProfileBookUserControl x:Name="WishListBook1TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="361" Canvas.Left="11"/>
-            <local:ProfileBookUserControl x:Name="WishListBook2TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="361" Canvas.Left="189"/>
+            <!--local:ProfileBookUserControl x:Name="WishListBook1TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="361" Canvas.Left="11"/-->
+            <!--local:ProfileBookUserControl x:Name="WishListBook2TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="361" Canvas.Left="189"/-->
             <Button x:Name="WishListBookAddButton" Width="140" FontSize="72" Height="177" Canvas.Left="376" Canvas.Top="361" Content="+"/>
             <Rectangle x:Name="PurchaseHistoryHeader" Fill="#FFF4F4F5" Height="71" Stroke="Black" Canvas.Top="552" Width="762"/>
             <TextBlock x:Name="PurchaseHistoryHeaderText" Height="54" Canvas.Left="11" TextWrapping="Wrap" Text="Purchase History" Canvas.Top="561" Width="270" FontSize="36"/>
@@ -186,7 +186,7 @@
                 <ComboBoxItem Content="In Progress" Height="35" Style="{DynamicResource SimpleComboBoxItem}" Width="220" FontSize="24"/>
                 <ComboBoxItem Content="Read" Height="35" Style="{DynamicResource SimpleComboBoxItem}" Width="220" FontSize="24"/>
             </ComboBox>
-            <local:ProfilePurchaseHistoryUserControl Height="177" Canvas.Left="11" Canvas.Top="640" Width="140"/>
+            <!--local:ProfilePurchaseHistoryUserControl Height="177" Canvas.Left="11" Canvas.Top="640" Width="140"/-->
         </Canvas>
         <Canvas x:Name="BadgeInfoScreen" Height="993" Width="760" Cursor="Hand" d:IsHidden="True">
             <Rectangle x:Name="BadgeScreenFade" Fill="Black" Height="993" Canvas.Left="0" Stroke="Black" Width="760" Opacity="0.495"/>
@@ -253,7 +253,7 @@
                 </Grid>
             </Grid>
         </ScrollViewer>
-        <ScrollViewer x:Name="Purchase_Popular" Canvas.Top="165" Height="904" Width="760" Background="#FFF8ECC2" Canvas.Left="1.6">
+        <ScrollViewer x:Name="Purchase_Popular" Canvas.Top="165" Height="904" Width="760" Background="#FFF8ECC2" Canvas.Left="1.6" d:IsHidden="True">
             <Grid>
                 <Rectangle x:Name="BookImage10" Height="263.6" Stroke="Black" Width="186" HorizontalAlignment="Center" VerticalAlignment="Center" RadiusY="20" Fill="#FFF4F4F5" Margin="13,0,544.2,564.4"/>
                 <Rectangle x:Name="BookImage11" Height="263.6" Stroke="Black" Width="186" HorizontalAlignment="Center" VerticalAlignment="Center" RadiusY="20" Fill="#FFF4F4F5" Margin="298.03,0,259.17,564.4"/>
@@ -314,7 +314,7 @@
                 </Grid>
             </Grid>
         </ScrollViewer>
-        <ScrollViewer x:Name="BookDetail" Height="821.4" Canvas.Left="95" Canvas.Top="115" Width="570">
+        <ScrollViewer x:Name="BookDetail" Height="821.4" Canvas.Left="95" Canvas.Top="115" Width="570" d:IsHidden="True">
             <Grid>
                 <Rectangle x:Name="Background" Fill="#FF3F3F45" HorizontalAlignment="Left" Height="832" Margin="0,0,-0.8,0" Stroke="Black" VerticalAlignment="Top" Width="554"/>
                 <TextBlock x:Name="BookDetailTextbox" TextWrapping="Wrap" FontSize="36" Margin="38,249.2,27.3,217" Foreground="#FFF6EFEF"><Run Text="&lt;Book "/><Run Text="Detail"/><Run Text="&gt;"/><LineBreak/><LineBreak/><Run Text="This book is about little prince and princess. They fall in love in each other but an evil witch kidnapped the princess...."/></TextBlock>

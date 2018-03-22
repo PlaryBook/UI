@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\lenovo\Documents\GitHub\UI\Plary\obj\Debug\
+\\samba.cs.ucalgary.ca\ian.johnston\Documents\GitHub\UI\Plary\obj\Debug\
 Plary
 none
 false
 DEBUG;TRACE
-C:\Users\lenovo\Documents\GitHub\UI\Plary\App.xaml
+\\samba.cs.ucalgary.ca\ian.johnston\Documents\GitHub\UI\Plary\App.xaml
 41908500973
 
-71358058139
+112010370047
 131569487696
 MainWindow.xaml;ProfileBookUserControl.xaml;ProfilePurchaseHistoryUserControl.xaml;Simple Styles.xaml;
 
-False
+True
 
