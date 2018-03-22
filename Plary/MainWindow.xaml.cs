@@ -41,6 +41,10 @@ namespace Plary
             this.BadgeInfoScreen.Visibility = Visibility.Hidden;
             this.Headers.Visibility = Visibility.Hidden;
             this.ProfileScreen.Visibility = Visibility.Hidden;
+            this.BookDetail.Visibility = Visibility.Hidden;
+            this.Purchase_Popular.Visibility = Visibility.Hidden;
+            this.BookDetail_Purchase.Visibility = Visibility.Hidden;
+            this.SettingBar.Visibility = Visibility.Hidden;        
 
             //Login and create account screen button functionality
             this.LoginButton.Click += OnLogin;
