@@ -1,9 +1,10 @@
-﻿<Window x:Name="Tablet" x:Class="Plary.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Plary"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Name="Tablet" x:Class="Plary.MainWindow"
         mc:Ignorable="d"
         Title="Plary" Height="1024" Width="768">
     <Window.Resources>
@@ -72,8 +73,8 @@
             <TextBox x:Name="LoginUsernameTextBox" Height="52" Canvas.Left="199" Canvas.Top="423" Width="371" FontSize="36" Cursor="Arrow"/>
             <TextBlock x:Name="LoginPasswordLabel" Height="52" TextWrapping="Wrap" Text="Password" Canvas.Top="537" Width="175.5" FontSize="36" UseLayoutRounding="False" TextAlignment="Right"/>
             <TextBox x:Name="LoginPasswordTextBox" Height="52" Canvas.Left="199" Canvas.Top="537" Width="371" FontSize="36"/>
-            <Button x:Name="LoginButton" Content="&#xD;&#xA;Login&#xD;&#xA;" Height="75" Style="{DynamicResource LoginMenuButton}" Canvas.Top="687" Width="237"/>
-            <Button x:Name="CreateNewAccountButton" Content="&#xD;&#xA;Create Account&#xD;&#xA;" Height="75" Canvas.Left="333" Style="{DynamicResource LoginMenuButton}" Canvas.Top="687" Width="237"/>
+            <Button x:Name="LoginButton" Content="&#xA;Login&#xA;" Height="75" Style="{DynamicResource LoginMenuButton}" Canvas.Top="687" Width="237"/>
+            <Button x:Name="CreateNewAccountButton" Content="&#xA;Create Account&#xA;" Height="75" Canvas.Left="333" Style="{DynamicResource LoginMenuButton}" Canvas.Top="687" Width="237"/>
         </Canvas>
         <Canvas x:Name="CreateAccountScreen" Canvas.Left="95" Canvas.Top="85 " Height="816" Width="570" d:IsHidden="True">
             <Rectangle x:Name="CreateAccountPlaryLogo" Fill="#FFF4F4F5" Height="244" Stroke="Black" Width="244" HorizontalAlignment="Center" VerticalAlignment="Center" RadiusY="21.5" RadiusX="21.5" Canvas.Left="165" Canvas.Top="4"/>
@@ -183,7 +184,7 @@
             </ComboBox>
             <local:ProfilePurchaseHistoryUserControl Height="177" Canvas.Left="11" Canvas.Top="640" Width="140"/>
         </Canvas>
-        <Canvas x:Name="BadgeInfoScreen" Height="993" Width="760" Cursor="Hand" d:IsHidden="True">
+        <Canvas x:Name="BadgeInfoScreen" Height="993" Width="760" Cursor="Hand">
             <Rectangle x:Name="BadgeScreenFade" Fill="Black" Height="993" Canvas.Left="0" Stroke="Black" Width="760" Opacity="0.495"/>
             <Ellipse x:Name="BigBadgeImage" Fill="#FFC5C5C5" Height="410" Canvas.Left="175" Stroke="Black" Canvas.Top="80" Width="410" StrokeThickness="3"/>
             <Rectangle x:Name="BadgeTextBackground" Fill="Black" Height="451" Canvas.Left="44" Stroke="Black" Canvas.Top="512" Width="672" Opacity="0.4"/>
@@ -192,6 +193,9 @@
             <TextBlock x:Name="BadgeImageTEMP" Height="100.5" Canvas.Left="277" TextWrapping="Wrap" Text="Insert Badge Image Here" Canvas.Top="236" Width="206" FontSize="36"/>
         </Canvas>
         <Canvas x:Name="ReadingScreen" Height="994" Canvas.Left="-1" Width="761">
+            <Rectangle x:Name="Background" Fill="#FFFBFBFB" Height="994" Canvas.Left="1" Stroke="{x:Null}" Width="760"/>
+            <Rectangle x:Name="ReadProgressBar" Fill="#FF76FF02" Height="46" Canvas.Left="1" Stroke="{x:Null}" Canvas.Top="948" Width="94"/>
+            <Rectangle x:Name="UnreadProgressBar" Fill="#FF7729FF" Height="946" Canvas.Left="665" Stroke="{x:Null}" Canvas.Top="48" Width="96"/>
             <Button x:Name="FlipLeftButton" Height="994" Style="{DynamicResource PageFlipButton}" Width="96"/>
             <Button x:Name="FlipRightButton" Content="Button" Canvas.Left="663.5" Style="{DynamicResource PageFlipButton}" Width="97.5" RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
@@ -206,5 +210,6 @@
             <local:BookPage Height="994" Canvas.Left="95" Width="570"/>
             <local:ReadingOptionsTool x:Name="OptionsControl" Height="238.5" Canvas.Left="384.5" Canvas.Top="91.5" Width="238.5"/>
         </Canvas>
+        <local:SharePopup Height="387" Canvas.Left="124" Canvas.Top="287.987" Width="506"/>
     </Canvas>
 </Window>

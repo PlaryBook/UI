@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -54,12 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bookmark.xaml.cs">
+      <DependentUpon>Bookmark.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BookPage.xaml.cs">
       <DependentUpon>BookPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ReadingOptionsTool.xaml.cs">
       <DependentUpon>ReadingOptionsTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SharePopup.xaml.cs">
+      <DependentUpon>SharePopup.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Bookmark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BookPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ReadingOptionsTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SharePopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +142,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Design\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="highlighter.png" />
+    <Content Include="highlighter_icon.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,14 +13,80 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
+                            <ControlTemplate.Resources>
+                                <Storyboard x:Key="PageFlipSignifier">
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </ControlTemplate.Resources>
                             <Canvas Height="994" Width="96">
-                                <Rectangle Fill="#FFFBFBFB" Stroke="{x:Null}" Height="994" Width="96"/>
-                                <Path Data="M75,409 L32.5,471.5 C32.5,471.5 74.5,522.5 74.5,522.5" Fill="#FFF4F4F5" Height="128" Canvas.Left="32.5" Stretch="Fill" Stroke="Black" Canvas.Top="409" Width="41.5"/>
+                                <Rectangle Fill="#FFFBFBFB" Stroke="{x:Null}" Height="994" Width="96" Opacity="0.7"/>
+                                <Path x:Name="path" Data="M75,409 L32.5,471.5 C32.5,471.5 74.5,522.5 74.5,522.5" Fill="#FFF4F4F5" Height="128" Canvas.Left="32.5" Stretch="Fill" Stroke="Black" Canvas.Top="409" Width="41.5"/>
                             </Canvas>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsFocused" Value="True"/>
                                 <Trigger Property="IsDefaulted" Value="True"/>
-                                <Trigger Property="IsMouseOver" Value="True"/>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{StaticResource PageFlipSignifier}"/>
+                                    </Trigger.EnterActions>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True"/>
+                                <Trigger Property="IsEnabled" Value="False"/>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="CloseButton" TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <ControlTemplate.Resources>
+                                <Storyboard x:Key="CloseButtonSignifer">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="CloseButtonSignifer_Copy1">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+                                        <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.5"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </ControlTemplate.Resources>
+                            <Grid x:Name="grid" Opacity="0.5">
+                                <Ellipse Fill="#FFF1E8DD" StrokeThickness="0" Opacity="1"/>
+                                <Path Data="M-23,-70 L5,-42.666667" HorizontalAlignment="Left" Height="34.94" Margin="14,13.863,0,0" Stretch="Fill" Stroke="#FFAC6A6A" StrokeThickness="5" VerticalAlignment="Top" Width="35.334"/>
+                                <Path Data="M-23,-70 L5,-42.666667" HorizontalAlignment="Left" Height="34.94" Margin="14,13.863,0,0" Stretch="Fill" Stroke="#FFAC6A6A" StrokeThickness="5" VerticalAlignment="Top" Width="35.334" RenderTransformOrigin="0.5,0.5">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsFocused" Value="True"/>
+                                <Trigger Property="IsDefaulted" Value="True"/>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard x:Name="CloseButtonSignifer_Copy1_BeginStoryboard" Storyboard="{StaticResource CloseButtonSignifer_Copy1}"/>
+                                    </Trigger.ExitActions>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{StaticResource CloseButtonSignifer}"/>
+                                    </Trigger.EnterActions>
+                                </Trigger>
                                 <Trigger Property="IsPressed" Value="True"/>
                                 <Trigger Property="IsEnabled" Value="False"/>
                             </ControlTemplate.Triggers>
