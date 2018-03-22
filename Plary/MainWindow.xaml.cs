@@ -52,8 +52,9 @@ namespace Plary
             this.CreatedContinueButton.Click += OnCreatedContinue;
 
             //Profile Screen (And badge info) functionality
-            FullBadge1.MouseLeftButtonDown += OnFullBadgeClick;
-            BadgeInfoScreen.MouseLeftButtonDown += OnFullBadgeScreenClick;
+            this.ReadingListUniformGrid.Width = this.ReadingListUniformGrid.Children.Count * 180;
+            this.WishListUniformGrid.Width = this.WishListUniformGrid.Children.Count * 180;
+            this.PurchaseHistoryUniformGrid.Width = this.PurchaseHistoryUniformGrid.Children.Count * 180;
         }
 
         #region Login/Create account screen button functionality
@@ -104,17 +105,9 @@ namespace Plary
 
         #endregion
 
+
         #region Profile Screen (And badge info) functionality
 
-        private void OnFullBadgeClick(object sender, MouseButtonEventArgs e)
-        {
-            this.BadgeInfoScreen.Visibility = Visibility.Visible;
-        }
-
-        private void OnFullBadgeScreenClick(object sender, MouseButtonEventArgs e)
-        {
-            this.BadgeInfoScreen.Visibility = Visibility.Hidden;
-        }
 
         #endregion
     }
