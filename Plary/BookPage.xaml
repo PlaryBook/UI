@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="Plary.BookPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Plary"
+             mc:Ignorable="d" 
+             d:DesignHeight="994" d:DesignWidth="570">
+    <UserControl.Resources>
+        <Storyboard x:Key="EnterFullscreen">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="Page1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.339"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Page1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="Page1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.003"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Page1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ExitFullscreen">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="Page1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.339"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Page1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="Page1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.003"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Page1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Control.MouseDoubleClick">
+            <BeginStoryboard Storyboard="{StaticResource EnterFullscreen}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseRightButtonUp">
+            <BeginStoryboard x:Name="ExitFullscreen_BeginStoryboard" Storyboard="{StaticResource ExitFullscreen}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        <Rectangle x:Name="Page1" Fill="#FFAEA29C" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock x:Name="PageText" TextWrapping="Wrap" FontSize="24" Margin="15,21,21,18"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra elit nec dolor egestas accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi imperdiet mi diam. Fusce quis suscipit ante. Nulla elementum blandit turpis, semper rhoncus ex porta eu. Quisque pellentesque egestas risus, posuere molestie dui molestie sollicitudin. Quisque vestibulum eu risus at eleifend."/><LineBreak/><Run/><LineBreak/><Run Text="Ut at ullamcorper velit, sit amet auctor sem. Cras ut lectus non lectus tincidunt ornare ullamcorper sed libero. Nullam commodo tortor tortor, eu auctor eros finibus sed. Mauris eget dolor mauris. Aenean ex mi, cursus ac velit ac, vehicula lacinia odio. Donec euismod tellus at malesuada convallis. Ut eget elit vitae tortor fermentum rhoncus imperdiet eu enim. Maecenas tortor velit, bibendum elementum tempor quis, pharetra non nisi. Proin consequat, nisl vel ullamcorper consequat, orci magna lacinia erat, in porttitor nibh leo vitae odio. Maecenas faucibus mi sed magna vestibulum, non tempus lorem semper."/><LineBreak/><Run/><LineBreak/><Run Text="Donec hendrerit quis diam in elementum. Nunc arcu arcu, elementum sed felis placerat, tincidunt facilisis quam. Nullam dictum neque et lacus congue porta. Nullam nec feugiat diam, in ornare est. Morbi et nunc cursus, lacinia lorem vel, pretium magna. Curabitur sed hendrerit nunc. Vivamus ultrices dui ligula, sed facilisis justo vestibulum vel. Nullam venenatis, velit sed scelerisque sollicitudin, massa mauris ullamcorper sapien, tincidunt scelerisque libero felis nec nibh. Maecenas porttitor dui non dolor gravida molestie."/><LineBreak/><Run/><LineBreak/><Run Text="Quisque viverra congue semper. Curabitur tempus varius neque sit amet varius. Quisque sed est ut dolor sodales vestibulum. Suspendisse enim nunc, mollis et fringilla et, dapibus at dolor. Proin consequat pretium dictum. Curabitur rhoncus nisi cursus lorem porttitor aliquam. Nullam ultrices sapien id quam blandit, a commodo nisi tincidunt. Duis non purus quis dolor sodales lobortis. Mauris sollicitudin est sodales iaculis volutpat. Donec euismod tellus sit amet massa egestas, vel viverra sapien finibus."/><LineBreak/><Run/><LineBreak/><Run Text="Nam eget convallis magna, sed porta purus. Quisque non tempus massa. Suspendisse et suscipit velit. Donec finibus ligula quis libero lobortis, quis pharetra ligula finibus. Nunc tincidunt porta lectus id sagittis. Quisque sollicitudin sapien vitae dictum congue. Curabitur auctor dignissim mollis. Phasellus mattis nulla non sapien viverra, sed dignissim turpis auctor. Donec fermentum, lectus at aliquam ultrices, sem sapien commodo nisi, vitae aliquam arcu nulla a dolor. Nunc consequat, orci quis maximus volutpat, diam libero semper enim, at viverra risus ex consequat ligula. Cras nec placerat neque, eu dapibus arcu."/></TextBlock>
+
+    </Grid>
+</UserControl>

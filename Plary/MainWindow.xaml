@@ -62,7 +62,7 @@
             <BeginStoryboard x:Name="BadgeInfoFadeIn_BeginStoryboard" Storyboard="{StaticResource BadgeInfoFadeIn}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Canvas x:Name="Screen">
+    <Canvas x:Name="Screen" Width="760" Height="994">
         <Canvas.Background>
             <SolidColorBrush Color="{DynamicResource Book Page Color}"/>
         </Canvas.Background>
@@ -162,7 +162,7 @@
                 <Path Data="M712,61 L680.66667,44.333333" Fill="#FFF4F4F5" Height="17.667" Stretch="Fill" Stroke="Black" Canvas.Top="17.333" Width="32.333"/>
             </Canvas>
         </Canvas>
-        <Canvas x:Name="ProfileScreen" Height="817" Canvas.Left="-1" Canvas.Top="160" Width="762">
+        <Canvas x:Name="ProfileScreen" Height="817" Canvas.Left="-1" Canvas.Top="160" Width="762" d:IsHidden="True">
             <Rectangle x:Name="ReadingListHeader" Fill="#FFF4F4F5" Height="71" Stroke="Black" Width="762"/>
             <TextBlock x:Name="ReadingListHeaderText" Height="54" Canvas.Left="11" TextWrapping="Wrap" Text="Reading List" Canvas.Top="9" Width="200" FontSize="36"/>
             <local:ProfileBookUserControl x:Name="ReadingBook1TEMP" Width="140" Height="177" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="84.5" Canvas.Left="11"/>
@@ -190,6 +190,21 @@
             <TextBlock x:Name="BadgeInformation" Height="391" Canvas.Left="44" TextWrapping="Wrap" Canvas.Top="512" Width="672" FontSize="36" Foreground="White" Padding="10"><Run Text="Name" TextDecorations="Underline"/><Run Text=": The Name of the badge"/><LineBreak/><Run Text="Acquisition" TextDecorations="Underline"/><Run Text=": How you got the badge"/><LineBreak/><Run Text="Description" TextDecorations="Underline"/><Run Text=": What the badge does for you"/></TextBlock>
             <TextBlock x:Name="BadgeUses" Height="60" Canvas.Left="44" TextWrapping="Wrap" Text="0/1" Canvas.Top="903" Width="672" FontSize="36" Foreground="White" TextAlignment="Center"/>
             <TextBlock x:Name="BadgeImageTEMP" Height="100.5" Canvas.Left="277" TextWrapping="Wrap" Text="Insert Badge Image Here" Canvas.Top="236" Width="206" FontSize="36"/>
+        </Canvas>
+        <Canvas x:Name="ReadingScreen" Height="994" Canvas.Left="-1" Width="761">
+            <Button x:Name="FlipLeftButton" Height="994" Style="{DynamicResource PageFlipButton}" Width="96"/>
+            <Button x:Name="FlipRightButton" Content="Button" Canvas.Left="663.5" Style="{DynamicResource PageFlipButton}" Width="97.5" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <local:BookPage Height="994" Canvas.Left="95" Width="570"/>
+            <local:ReadingOptionsTool x:Name="OptionsControl" Height="238.5" Canvas.Left="384.5" Canvas.Top="91.5" Width="238.5"/>
         </Canvas>
     </Canvas>
 </Window>

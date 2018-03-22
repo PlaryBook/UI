@@ -20,3 +20,29 @@ E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Cod
 E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\Simple Styles.baml
 E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\ProfilePurchaseHistoryUserControl.g.cs
 E:\Winter 2018\CPSC 481 (Human-Computer Interaction I)\Project\Deliverable 3\Code\Plary\Plary\obj\Debug\ProfilePurchaseHistoryUserControl.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\bin\Debug\Plary.exe.config
+C:\Users\Shine\Documents\GitHub\UI\Plary\bin\Debug\Plary.exe
+C:\Users\Shine\Documents\GitHub\UI\Plary\bin\Debug\Plary.pdb
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.csprojResolveAssemblyReference.cache
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Simple Styles.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\MainWindow.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\ProfileBookUserControl.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\ProfilePurchaseHistoryUserControl.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\ReadingOptionsTool.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\App.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary_MarkupCompile.cache
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary_MarkupCompile.lref
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\App.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\MainWindow.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\ProfileBookUserControl.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\ProfilePurchaseHistoryUserControl.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\ReadingOptionsTool.baml
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.g.resources
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.Properties.Resources.resources
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.csproj.GenerateResource.cache
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.csproj.CoreCompileInputs.cache
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.exe
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\Plary.pdb
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\BookPage.g.cs
+C:\Users\Shine\Documents\GitHub\UI\Plary\obj\Debug\BookPage.baml

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Plary.ReadingOptionsTool"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Plary"
+             mc:Ignorable="d" 
+             d:DesignHeight="238.5" d:DesignWidth="238.5">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="232*"/>
+        </Grid.RowDefinitions>
+        <Path Data="M35.5,40.5 C35.5,40.5 108,-46.500356 204,38.999644 L163,77.500224 C163,77.500224 118.5,31.999947 72.5,78.000224 z" HorizontalAlignment="Left" Height="81" Margin="33.5,0,0,0" Stretch="Fill" StrokeThickness="5" VerticalAlignment="Top" Width="173.5" Fill="#FFBFA560" Grid.RowSpan="2"/>
+        <Path Data="M76,162 C76,162 117,201.49964 161.5,160.99964 L200,202.99943 C200,202.99943 122,278.4987 37.5,201.49909 z" Fill="#FF774E7C" HorizontalAlignment="Left" Height="75.116" Margin="37.5,154.015,0,0" Grid.Row="1" Stretch="Fill" StrokeThickness="5" VerticalAlignment="Top" Width="162.5"/>
+        <Path Data="M163,79 L205,39.999644 C205,39.999644 279.5,112.99995 200.5,203.50078 L161,163.00014 C161,163.00014 201.99999,117.50071 163,79 z" Fill="#FF53ADC1" HorizontalAlignment="Left" Height="163.5" Margin="161,33.015,0,0" Grid.Row="1" Stretch="Fill" StrokeThickness="5" VerticalAlignment="Top" Width="75.817"/>
+        <Path Data="M73,78 L34,38.999644 C34,38.999644 -40.666667,118.00001 36.666667,202.00077 L75.333332,163.33349 C75.333332,163.33349 37.332879,122.00075 73,78 z" Fill="#FF90AA57" HorizontalAlignment="Left" Height="163" Margin="1.591,32.015,0,0" Grid.Row="1" Stretch="Fill" StrokeThickness="5" VerticalAlignment="Top" Width="73.742"/>
+        <Ellipse Fill="#FFBBBAB7" HorizontalAlignment="Left" Height="118.832" Margin="58.643,52.437,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118.833"/>
+
+        <Ellipse Stroke="#FF63493D" StrokeThickness="5" Grid.RowSpan="2"/>
+        <Ellipse Stroke="#FF63493D" StrokeThickness="5" Margin="55.308,49.167,57.416,56.917" Grid.Row="1"/>
+        <Path Data="M313.66667,329.33333 L279.83299,294.83368" Stretch="Fill" Stroke="#FF63493D" StrokeThickness="5" Margin="31,30.167,164.666,159.167" Grid.Row="1"/>
+        <Path Data="M413.66667,329.33333 L447.66632,294.66701" Stretch="Fill" Stroke="#FF63493D" StrokeThickness="5" Margin="162.584,30.167,30.584,159.167" Grid.Row="1"/>
+        <Path Data="M413,428 L445,461.33333" Stretch="Fill" StrokeThickness="5" Stroke="#FF63493D" RenderTransformOrigin="0.5,0.5" Margin="158.218,152.782,34.469,31.032" Grid.Row="1">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.04"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Data="M316.33333,427.33333 L283.00034,462.00034" Stretch="Fill" Stroke="#FF63493D" StrokeThickness="5" RenderTransformOrigin="0.5,0.5" Margin="35.574,153.926,160.156,34.342" Grid.Row="1">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.194"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Data="M272.5,48.5" Fill="#FFBFA560" HorizontalAlignment="Left" Height="0" Margin="272.5,41.515,-34,0" Grid.Row="1" Stretch="Fill" StrokeThickness="5" VerticalAlignment="Top" Width="0"/>
+        <Path Data="M108.66667,86.666667 L80.666331,115.33264 107.33298,144.66593 107.33298,130.66541 136.66667,131.33207 136.66667,102.66577 108.66617,102.66577 z" Fill="White" HorizontalAlignment="Left" Height="58" Margin="88.666,83.684,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="56"/>
+
+    </Grid>
+</UserControl>
